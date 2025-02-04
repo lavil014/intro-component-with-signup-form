@@ -1,0 +1,94 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+:root{
+  --Red: hsl(0, 100%, 74%) ;
+  --Green: hsl(154, 59%, 51%);
+  --Blue: hsl(248, 32%, 49%);
+  --DarkBlue: hsl(249, 10%, 26%); 
+  --GrayishBlue: hsl(246, 25%, 77%);
+}
+
+body{
+  background-image: url(/images/bg-intro-desktop.png);
+  background-color: var(--Red);
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+}
+
+main{
+  display: grid;
+  grid-template-columns: repeat(2 , 1fr);
+}
+
+section{
+  padding: 1rem;
+}
+
+.page-information{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.page-information .header{
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.page-information .paragraph{
+  text-align: left;
+   font-size: 0.8rem;
+  color: white;
+  max-width: 25rem;
+}
+
+.signup-section{
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.billing-information{
+  background-color: var(--Blue);
+  max-width: 22rem;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  color: var(--GrayishBlue);
+  display: flex;
+  justify-content: center;
+}
+
+.billing-information span{
+  color: white;
+}
+
+form{
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  max-width: 22rem;
+}
+
+form button{
+  background-color: var(--Green);
+  min-width: 20rem;
+  padding: 0.8rem;
+  font-weight: 800;
+  color: white;
+  border: transparent;
+  border-radius: 0.2rem;
+  font-size: 0.5rem;
+}
