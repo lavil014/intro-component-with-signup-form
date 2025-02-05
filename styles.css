@@ -15,6 +15,7 @@
 }
 
 body{
+  font-family: "Rubik", serif;;
   background-image: url(/images/bg-intro-desktop.png);
   background-color: var(--Red);
   background-repeat: no-repeat;
@@ -22,11 +23,6 @@ body{
   align-items: center;
   justify-content: center;
   height: 100dvh;
-}
-
-main{
-  display: grid;
-  grid-template-columns: repeat(2 , 1fr);
 }
 
 section{
@@ -75,6 +71,18 @@ section{
   color: white;
 }
 
+.terms{
+  font-size: 0.56rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  color: var(--GrayishBlue);
+}
+
+.highlighted-terms{
+  font-weight: 800;
+  color: red;
+}
+
 form{
   background-color: white;
   padding: 1rem;
@@ -82,13 +90,56 @@ form{
   max-width: 22rem;
 }
 
+form input::placeholder{
+  font-size: 0.9rem;
+}
+
+.form-control{
+  font-size: 0.7rem;
+  padding: 0.5rem;
+}
+
+.error-class{
+  border: solid red 0.09rem;
+  background-image: url(/images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 0.7rem);
+  background-size: 5%;
+  outline: none;
+}
+
+.error-container{
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.error-message{
+  color: red;
+  font-size: 0.6rem;
+  text-align: left;
+  width: 100%;
+  text-align: right; 
+}
+
 form button{
   background-color: var(--Green);
-  min-width: 20rem;
   padding: 0.8rem;
+  width: 100%;
   font-weight: 800;
   color: white;
   border: transparent;
   border-radius: 0.2rem;
   font-size: 0.5rem;
+}
+
+
+
+@media(width < 740px){
+ 
+  .page-information .paragraph{
+   text-align: center;
+   font-size: 0.9rem;
+  }
+
+
 }
