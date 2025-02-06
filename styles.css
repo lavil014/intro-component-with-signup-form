@@ -12,6 +12,8 @@
   --Blue: hsl(248, 32%, 49%);
   --DarkBlue: hsl(249, 10%, 26%); 
   --GrayishBlue: hsl(246, 25%, 77%);
+  --LightRed: rgb(247, 4, 4);
+  --White: rgb(250, 245, 245);
 }
 
 body{
@@ -30,7 +32,7 @@ section{
 }
 
 .page-information{
-  color: white;
+  color: var(--White);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -46,19 +48,20 @@ section{
 .page-information .paragraph{
   text-align: left;
    font-size: 0.8rem;
-  color: white;
+  color: var(--White);
   max-width: 25rem;
 }
 
 .signup-section{
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.8rem;
 }
 
 .billing-information{
   background-color: var(--Blue);
-  max-width: 22rem;
+  width: 80%;
   padding: 0.3rem;
   border-radius: 0.5rem;
   text-align: center;
@@ -68,7 +71,7 @@ section{
 }
 
 .billing-information span{
-  color: white;
+  color: var(--White);
 }
 
 .terms{
@@ -76,31 +79,33 @@ section{
   text-align: center;
   margin-top: 0.5rem;
   color: var(--GrayishBlue);
+  width: 100%;
 }
 
 .highlighted-terms{
   font-weight: 800;
-  color: red;
+  color: var(--LightRed);
 }
 
 form{
-  background-color: white;
-  padding: 1rem;
+  background-color: var(--White);
+  padding: 2rem 1rem;
   border-radius: 0.5rem;
-  max-width: 22rem;
+  width: 80%;
 }
 
 form input::placeholder{
-  font-size: 0.9rem;
+  font-size: 0.7rem;
 }
 
 .form-control{
   font-size: 0.7rem;
   padding: 0.5rem;
+  margin-top: -1.9rem;
 }
 
 .error-class{
-  border: solid red 0.09rem;
+  border: solid var(--LightRed) 0.09rem;
   background-image: url(/images/icon-error.svg);
   background-repeat: no-repeat;
   background-position: calc(100% - 0.7rem);
@@ -114,11 +119,12 @@ form input::placeholder{
 }
 
 .error-message{
-  color: red;
-  font-size: 0.6rem;
+  color: var(--LightRed);
+  font-size: 0.5rem;
   text-align: left;
   width: 100%;
-  text-align: right; 
+  text-align: right;
+  display: none;
 }
 
 form button{
@@ -126,7 +132,7 @@ form button{
   padding: 0.8rem;
   width: 100%;
   font-weight: 800;
-  color: white;
+  color: var(--White);
   border: transparent;
   border-radius: 0.2rem;
   font-size: 0.5rem;
