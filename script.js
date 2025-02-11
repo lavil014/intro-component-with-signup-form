@@ -27,27 +27,31 @@ inputs.forEach((input, index)=>{
         
     let value = input.value.trim();
     let errorSpan = errorSpans[index];
+    console.log(value)
 
     if(value ===''){
       errorSpan.style.display = 'block';
       errorSpan.textContent = `${input.placeholder} ${errorMessage}`;
       input.classList.add('error-class');
+      return
     } 
 
-// Specific validation for the email input
 
-    else if(input.type === 'email'){
-      if(value ===''){
-        console.log('Empty Value')
+    else if (input.type ==='email'){
+      if(value !== '' && !pattern.test(value)){
+        console.log('Hello');
+        errorSpan.style.display = 'block';
+        errorSpan.textContent = `${email}`;
+        input.classList.add('error-class');
+      }else{
+        errorSpan.style.display = 'none';
+        input.classList.remove('error-class','input-error');
       }
     }
-    
-    
-    
-    
+        
     else{
       errorSpan.style.display = 'none';
-      input.classList.remove('error-class');
+      input.classList.remove('error-class','input-error');
     }
     
   })
