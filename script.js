@@ -39,7 +39,6 @@ inputs.forEach((input, index)=>{
 
     else if (input.type ==='email'){
       if(value !== '' && !pattern.test(value)){
-        console.log('Hello');
         errorSpan.style.display = 'block';
         errorSpan.textContent = `${email}`;
         input.classList.add('error-class');
